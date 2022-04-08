@@ -1,6 +1,5 @@
 from django.http import Http404
 
-from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
@@ -9,14 +8,7 @@ from .models import Airplane
 from .serializers import AirplaneSerializer
 
 
-class AirplanePagination(PageNumberPagination):
-    page_size = 20
-    page_size_query_param = 'page_size'
-    max_page_size = 50
-
-
 class AirplaneList(APIView):
-    pagination_class = AirplanePagination
 
     def get(self, request):
         airplane = Airplane.objects.all()
