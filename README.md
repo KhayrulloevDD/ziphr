@@ -23,6 +23,7 @@ Deployment instructions:
 - clone https://github.com/KhayrulloevDD/ziphr.git repository;
 - create virtual environment and activate it(optional);
 - install dependencies from the requirements.txt file (pip install -r requirements.txt);
+- migrate migrations (python manage.py migrate);
 - run the server (python manage.py runserver).
 
 Usage instructions:
